@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LABORATORIUM IPA - UIN KYAI AGENG MUHAMMAD BESARI</title>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f1f8f3; color: #1f2937; }
+header { background: linear-gradient(135deg, #087f23, #16a34a); color: white; padding: 25px 20px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,.15); }
+.logo-container { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 12px; flex-wrap: wrap; }
+.logo { width: 75px; height: 75px; background: white; border-radius: 50%; object-fit: contain; padding: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+header h1 { font-size: 22px; margin-bottom: 5px; }
+header p { font-size: 16px; font-weight: bold; opacity: .95; }
+nav { background: white; display: flex; justify-content: center; gap: 8px; padding: 12px; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,.08); flex-wrap: wrap; }
+nav button { border: none; background: #e8f5e9; color: #087f23; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+nav button:hover { background: #16a34a; color: white; }
+.container { max-width: 1100px; margin: auto; padding: 25px 15px; }
+.card { background: white; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,.07); }
+.card h2 { color: #087f23; margin-bottom: 15px; font-size: 20px; }
+.rules { line-height: 1.8; padding-left: 20px; }
+.rules li { margin-bottom: 8px; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
+.menu-card { border: 1px solid #d7eadb; border-radius: 12px; padding: 20px; cursor: pointer; transition: .2s; }
+.menu-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,.1); }
+.menu-card h3 { color: #087f23; margin-bottom: 7px; }
+.form-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 6px; font-weight: bold; }
+input, textarea, select { width: 100%; padding: 12px; border: 1px solid #cbd5ce; border-radius: 8px; font-size: 15px; }
+textarea { min-height: 110px; resize: vertical; }
+.submit { width: 100%; padding: 13px; border: none; background: #087f23; color: white; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+.submit:hover { background: #065f1b; }
+.submit:disabled { background: #a3a3a3; cursor: not-allowed; }
+.back { margin-bottom: 15px; background: #e8f5e9; color: #087f23; border: none; padding: 10px 15px; border-radius: 7px; cursor: pointer; font-weight: bold; }
+footer { background: #064e1b; color: white; text-align: center; padding: 25px; margin-top: 30px; }
+.hidden { display: none; }
+.alert { margin-top: 15px; padding: 12px; border-radius: 8px; background: #dcfce7; color: #166534; display: none; font-weight: bold; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img class="logo" src="LOGO UIN.png" alt="Logo UIN">
+    <img class="logo" src="WhatsApp Image 2026-09-13 at 21.15.32.jpeg" alt="Logo Tadris IPA">
+  </div>
+  <h1>UIN KYAI AGENG MUHAMMAD BESARI</h1>
+  <p>LABORATORIUM IPA</p>
+</header>
+
+<nav>
+  <button onclick="showPage('home')">Beranda</button>
+  <button onclick="showPage('peminjaman')">Peminjaman</button>
+  <button onclick="showPage('pemakaian')">Pemakaian</button>
+  <button onclick="showPage('k3')">K3</button>
+  <button onclick="showPage('saran')">Saran</button>
+</nav>
+
+<div class="container">
+
+  <!-- BERANDA -->
+  <section id="home">
+    <div class="card">
+      <h2>TATA TERTIB PENGGUNAAN LABORATORIUM IPA</h2>
+      <ol class="rules">
+        <li>Pengguna laboratorium harus masuk dan keluar laboratorium dengan tertib dan dengan seizin Koor Lab/Dosen/Staff lab/Asisten Lab IPA.</li>
+        <li>Pengguna laboratorium wajib berpenampilan rapi, sopan dan menjunjung etika akademik di laboratorium sesuai dengan tata tertib di FTIK UIN Kiai Ageng Ponorogo.</li>
+        <li>Pengguna laboratorium wajib menggunakan K3 (Jaslab, Masker, Sarung Tangan, dan Alas Kaki) saat praktikum.</li>
+        <li>Meletakkan tas dan buku di tempat yang disediakan, kecuali alat tulis yang diperlukan.</li>
+        <li>Pengunjung laboratorium dilarang membuat gaduh di dalam laboratorium.</li>
+        <li>Media untuk praktikum dapat digunakan sesuai dengan petunjuk penggunaan atau sesuai dengan arahan.</li>
+        <li>Jika selama bekerja merusak atau memecahkan alat, maka yang bersangkutan WAJIB mengganti barang sesuai dengan yang dirusak.</li>
+        <li>Semua pengambilan barang berupa buku dan peralatan laboratorium harus seizin Koordinator/Dosen/staf laboratorium.</li>
+        <li>Mengembalikan barang-barang di laboratorium harus sepengetahuan Koordinator / Dosen/ Staff laboratorium.</li>
+        <li>Tidak diperbolehkan membawa makanan dan minuman ke dalam ruang laboratorium, kecuali untuk keperluan praktikum.</li>
+        <li>Dilarang mencoba alat dan bahan praktikum yang berbahaya.</li>
+        <li>Membaca, memahami, dan mengerti setiap prosedur dalam penggunaan fasilitas serta layanan laboratorium.</li>
+        <li>Praktikan wajib menjaga kebersihan ruang laboratorium.</li>
+        <li>Semua pengunjung WAJIB mematuhi tata tertib yang berlaku.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Layanan</h2>
+      <div class="menu-grid">
+        <div class="menu-card" onclick="showPage('peminjaman')">
+          <h3>Surat Peminjaman</h3>
+          <p>Ajukan peminjaman barang atau fasilitas.</p>
+        </div>
+        <div class="menu-card" onclick="showPage('pemakaian')">
+          <h3>Pemakaian</h3>
+          <p>Ajukan penggunaan ruangan atau fasilitas.</p>
+        </div>
+        <div class="menu-card" onclick="showPage('k3')">
+          <h3>K3</h3>
+          <p>Pedoman keselamatan dan kesehatan kerja.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PEMINJAMAN -->
+  <section id="peminjaman" class="hidden">
+    <button class="back" onclick="showPage('home')">← Kembali</button>
+    <div class="card">
+      <h2>Form Surat Peminjaman</h2>
+      <form onsubmit="kirimForm(event, 'Peminjaman')">
+        <div class="form-group"><label>Nama dan NIM</label><input id="pNama" required></div>
+        <div class="form-group"><label>Semester / Kelas</label><input id="pUnit" required></div>
+        <div class="form-group"><label>Barang yang Dipinjam</label><input id="pBarang" required></div>
+        <div class="form-group"><label>Jumlah</label><input id="pJumlah" type="number" min="1" required></div>
+        <div class="form-group"><label>Tanggal Pinjam</label><input id="pTanggalPinjam" type="date" required></div>
+        <div class="form-group"><label>Tanggal Kembali</label><input id="pTanggalKembali" type="date" required></div>
+        <div class="form-group"><label>Keperluan</label><textarea id="pKeperluan" required></textarea></div>
+        <div class="form-group"><label>Keterangan</label><textarea id="pKeterangan"></textarea></div>
+        <button type="submit" class="submit">Kirim Permohonan</button>
+      </form>
+      <div id="pAlert" class="alert">✓ Data berhasil dikirim ke Spreadsheet!</div>
+    </div>
+  </section>
+
+  <!-- PEMAKAIAN -->
+  <section id="pemakaian" class="hidden">
+    <button class="back" onclick="showPage('home')">← Kembali</button>
+    <div class="card">
+      <h2>Form Pemakaian</h2>
+      <form onsubmit="kirimForm(event, 'Pemakaian')">
+        <div class="form-group"><label>Nama</label><input id="mNama" required></div>
+        <div class="form-group"><label>Barang/Unit</label><input id="mUnit" required></div>
+        <div class="form-group"><label>Ruangan</label><input id="mRuangan" required></div>
+        <div class="form-group"><label>Kegiatan</label><textarea id="mKegiatan" required></textarea></div>
+        <div class="form-group"><label>Tanggal</label><input id="mTanggal" type="date" required></div>
+        <div class="form-group"><label>Jam Mulai</label><input id="mMulai" type="time" required></div>
+        <div class="form-group"><label>Jam Selesai</label><input id="mSelesai" type="time" required></div>
+        <div class="form-group"><label>Keterangan</label><textarea id="mKeterangan"></textarea></div>
+        <button type="submit" class="submit">Kirim Data Pemakaian</button>
+      </form>
+      <div id="mAlert" class="alert">✓ Data berhasil dikirim ke Spreadsheet!</div>
+    </div>
+  </section>
+
+  <!-- K3 -->
+  <section id="k3" class="hidden">
+    <button class="back" onclick="showPage('home')">← Kembali</button>
+    <div class="card">
+      <h2>Keselamatan dan Kesehatan Kerja (K3)</h2>
+      <ol class="rules">
+        <li>Gunakan alat pelindung diri sesuai jenis pekerjaan.</li>
+        <li>Pastikan kondisi peralatan aman sebelum digunakan.</li>
+        <li>Jangan menggunakan peralatan yang rusak.</li>
+        <li>Jaga area kerja tetap bersih dan tidak licin.</li>
+        <li>Jangan bercanda atau melakukan tindakan berbahaya di area kerja.</li>
+        <li>Ikuti petunjuk penggunaan setiap peralatan.</li>
+        <li>Ketahui lokasi kotak P3K dan alat pemadam kebakaran.</li>
+        <li>Laporkan kecelakaan, kerusakan atau kondisi berbahaya kepada penanggung jawab.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SARAN -->
+  <section id="saran" class="hidden">
+    <button class="back" onclick="showPage('home')">← Kembali</button>
+    <div class="card">
+      <h2>Saran & Masukan</h2>
+      <form onsubmit="kirimForm(event, 'Saran')">
+        <div class="form-group"><label>Nama</label><input id="sNama" required></div>
+        <div class="form-group">
+          <label>Kategori</label>
+          <select id="sKategori">
+            <option>Saran</option>
+            <option>Keluhan</option>
+            <option>Fasilitas</option>
+            <option>Pelayanan</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Saran / Masukan</label><textarea id="sSaran" required></textarea></div>
+        <button type="submit" class="submit">Kirim Saran</button>
+      </form>
+      <div id="sAlert" class="alert">✓ Terima kasih. Saran Anda berhasil dikirim!</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>TADRIS IPA</p>
+  <p>Menjadi "ilmuwan santri" yang berkarakter ilmiah, peduli lingkungan, dan berintegritas spiritual.</p>
+</footer>
+
+<script>
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyn_U0ECDbE-99v9MzfUo2rhKjeyMywQphD6Gjtgsvz6SMMp38SYApUqoDIDqOKgKEq2A/exec";
+
+function showPage(page) {
+  const pages = ['home', 'peminjaman', 'pemakaian', 'k3', 'saran'];
+  pages.forEach(p => document.getElementById(p).classList.add('hidden'));
+  document.getElementById(page).classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+async function kirimForm(e, jenis) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.submit');
+  btn.disabled = true;
+  btn.innerText = "Mengirim...";
+
+  let payload = { jenis: jenis };
+
+  if (jenis === 'Peminjaman') {
+    payload.nama = document.getElementById('pNama').value;
+    payload.unit = document.getElementById('pUnit').value;
+    payload.barang = document.getElementById('pBarang').value;
+    payload.jumlah = document.getElementById('pJumlah').value;
+    payload.tanggalPinjam = document.getElementById('pTanggalPinjam').value;
+    payload.tanggalKembali = document.getElementById('pTanggalKembali').value;
+    payload.keperluan = document.getElementById('pKeperluan').value;
+    payload.keterangan = document.getElementById('pKeterangan').value;
+  } else if (jenis === 'Pemakaian') {
+    payload.nama = document.getElementById('mNama').value;
+    payload.unit = document.getElementById('mUnit').value;
+    payload.ruangan = document.getElementById('mRuangan').value;
+    payload.kegiatan = document.getElementById('mKegiatan').value;
+    payload.tanggal = document.getElementById('mTanggal').value;
+    payload.jamMulai = document.getElementById('mMulai').value;
+    payload.jamSelesai = document.getElementById('mSelesai').value;
+    payload.keterangan = document.getElementById('mKeterangan').value;
+  } else if (jenis === 'Saran') {
+    payload.nama = document.getElementById('sNama').value;
+    payload.kategori = document.getElementById('sKategori').value;
+    payload.saran = document.getElementById('sSaran').value;
+  }
+
+  try {
+    
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const alertId = jenis === 'Peminjaman' ? 'pAlert' : (jenis === 'Pemakaian' ? 'mAlert' : 'sAlert');
+    document.getElementById(alertId).style.display = 'block';
+    form.reset();
+    setTimeout(() => { document.getElementById(alertId).style.display = 'none'; }, 4000);
+
+  } catch (err) {
+    alert("Gagal mengirim data. Pastikan koneksi internet terhubung.");
+    console.error(err);
+  } finally {
+    btn.disabled = false;
+    btn.innerText = "Kirim Data";
+  }
+}
+</script>
+
+</body>
+</html>
